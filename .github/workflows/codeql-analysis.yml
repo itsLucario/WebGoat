@@ -59,7 +59,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      uses: xlui/action-maven-cli/jdk8@master
+      id: test
+      with:
+        lifecycle: 'clean package test'
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl

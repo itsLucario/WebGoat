@@ -56,7 +56,7 @@ jobs:
     - name: Autobuild
       uses: xlui/action-maven-cli/jdk8@master
       with:
-        lifecycle: 'clean package'
+        lifecycle: 'clean package install'
         
 
     # ℹ️ Command-line programs to run using the OS shell.
